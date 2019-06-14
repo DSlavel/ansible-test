@@ -1,0 +1,523 @@
+2019-06-13 06:51:59,594 p=18345 u=root |  PLAY [configure the container with ansible] ************************************
+2019-06-13 06:51:59,610 p=18345 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-13 06:52:01,693 p=18345 u=root |  ok: [127.0.0.1]
+2019-06-13 06:52:01,814 p=18345 u=root |  TASK [install nginx] ***********************************************************
+2019-06-13 06:52:18,918 p=18345 u=root |   [ERROR]: User interrupted execution
+
+2019-06-13 06:52:52,390 p=18563 u=root |  PLAY [configure the container with ansible] ************************************
+2019-06-13 06:52:52,406 p=18563 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-13 06:52:57,314 p=18563 u=root |  ok: [127.0.0.1]
+2019-06-13 06:52:57,862 p=18563 u=root |  TASK [create the site directory] ***********************************************
+2019-06-13 06:52:59,401 p=18563 u=root |  changed: [127.0.0.1]
+2019-06-13 06:52:59,678 p=18563 u=root |  TASK [copy the site directory in place] ****************************************
+2019-06-13 06:53:07,426 p=18563 u=root |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "cmd": "/usr/bin/rsync --delay-updates -F --compress --archive --out-format=<<CHANGED>>%i %n%L /site /var/www", "msg": "rsync: link_stat \"/site\" failed: No such file or directory (2)\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1183) [sender=3.1.1]\n", "rc": 23}
+2019-06-13 06:53:07,438 p=18563 u=root |  PLAY RECAP *********************************************************************
+2019-06-13 06:53:07,439 p=18563 u=root |  127.0.0.1                  : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-13 06:58:39,448 p=18993 u=root |   [WARNING]: Could not match supplied host pattern, ignoring: vagrant
+
+2019-06-13 06:58:39,451 p=18993 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-13 06:58:39,451 p=18993 u=root |  skipping: no hosts matched
+2019-06-13 06:58:39,451 p=18993 u=root |  PLAY RECAP *********************************************************************
+2019-06-13 06:59:01,978 p=19003 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-13 06:59:02,015 p=19003 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-13 06:59:08,245 p=19003 u=root |  ok: [127.0.0.1]
+2019-06-13 06:59:08,363 p=19003 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-13 06:59:09,408 p=19003 u=root |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "cmd": "/usr/bin/rsync --delay-updates -F --compress --archive --out-format=<<CHANGED>>%i %n%L /srv/ansible/site /srv/ansible/", "msg": "rsync: link_stat \"/srv/ansible/site\" failed: No such file or directory (2)\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1183) [sender=3.1.1]\n", "rc": 23}
+2019-06-13 06:59:09,414 p=19003 u=root |  PLAY RECAP *********************************************************************
+2019-06-13 06:59:09,415 p=19003 u=root |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-13 07:00:27,070 p=19152 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-13 07:00:27,086 p=19152 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-13 07:00:29,199 p=19152 u=root |  ok: [127.0.0.1]
+2019-06-13 07:00:29,332 p=19152 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-13 07:00:30,356 p=19152 u=root |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "cmd": "/usr/bin/rsync --delay-updates -F --compress --archive --out-format=<<CHANGED>>%i %n%L /srv/ansible/site /srv/ansible/", "msg": "rsync: link_stat \"/srv/ansible/site\" failed: No such file or directory (2)\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1183) [sender=3.1.1]\n", "rc": 23}
+2019-06-13 07:00:30,363 p=19152 u=root |  PLAY RECAP *********************************************************************
+2019-06-13 07:00:30,363 p=19152 u=root |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-13 07:22:13,845 p=19433 u=root |  ERROR! the playbook: example1.yml could not be found
+2019-06-13 07:22:19,379 p=19436 u=root |   [WARNING]: Could not match supplied host pattern, ignoring: vagrant
+
+2019-06-13 07:22:19,382 p=19436 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-13 07:22:19,382 p=19436 u=root |  skipping: no hosts matched
+2019-06-13 07:22:19,383 p=19436 u=root |  PLAY RECAP *********************************************************************
+2019-06-13 07:22:34,476 p=19444 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-13 07:22:34,492 p=19444 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-13 07:22:36,540 p=19444 u=root |  ok: [127.0.0.1]
+2019-06-13 07:22:36,658 p=19444 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-13 07:22:37,708 p=19444 u=root |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "cmd": "/usr/bin/rsync --delay-updates -F --compress --archive --out-format=<<CHANGED>>%i %n%L /srv/ansible/site /tmp", "msg": "rsync: link_stat \"/srv/ansible/site\" failed: No such file or directory (2)\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1183) [sender=3.1.1]\n", "rc": 23}
+2019-06-13 07:22:37,714 p=19444 u=root |  PLAY RECAP *********************************************************************
+2019-06-13 07:22:37,715 p=19444 u=root |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-13 07:26:49,141 p=19622 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-13 07:26:49,156 p=19622 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-13 07:26:51,224 p=19622 u=root |  ok: [127.0.0.1]
+2019-06-13 07:26:51,347 p=19622 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-13 07:26:52,114 p=19622 u=root |  changed: [127.0.0.1]
+2019-06-13 07:26:52,237 p=19622 u=root |  TASK [build the image] *********************************************************
+2019-06-13 07:27:58,427 p=19622 u=root |   [WARNING]: Please specify build.path instead of path. The path option has been
+renamed and will be removed in Ansible 2.12.
+
+2019-06-13 07:27:58,430 p=19622 u=root |   [WARNING]: The value of the "source" option was determined to be "build".
+Please set the "source" option explicitly. Autodetection will be removed in
+Ansible 2.12.
+
+2019-06-13 07:27:58,430 p=19622 u=root |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "msg": "Error building built-by-ansible - code: 100, message: The command '/bin/sh -c apt-get install -y nginx' returned a non-zero code: 100, logs: [u'Step 1/7 : FROM ubuntu:latest', u'\\n', u' ---> 7698f282e524\\n', u'Step 2/7 : RUN apt-get install -y nginx', u'\\n', u' ---> Running in 4b288c07cb08\\n', u'Reading package lists...', u'\\n', u'Building dependency tree...', u'\\nReading state information...\\n', u'\\x1b[91mE\\x1b[0m', u'\\x1b[91m: Unable to locate package nginx\\n\\x1b[0m', u'Removing intermediate container 4b288c07cb08\\n']"}
+2019-06-13 07:27:58,463 p=19622 u=root |  PLAY RECAP *********************************************************************
+2019-06-13 07:27:58,464 p=19622 u=root |  127.0.0.1                  : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-13 07:30:48,947 p=20133 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-13 07:30:48,964 p=20133 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-13 07:30:50,966 p=20133 u=root |  ok: [127.0.0.1]
+2019-06-13 07:30:51,058 p=20133 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-13 07:30:51,970 p=20133 u=root |  changed: [127.0.0.1]
+2019-06-13 07:30:52,097 p=20133 u=root |  TASK [build the image] *********************************************************
+2019-06-13 07:30:58,908 p=20133 u=root |   [WARNING]: Please specify build.path instead of path. The path option has been
+renamed and will be removed in Ansible 2.12.
+
+2019-06-13 07:30:58,916 p=20133 u=root |   [WARNING]: The value of the "source" option was determined to be "build".
+Please set the "source" option explicitly. Autodetection will be removed in
+Ansible 2.12.
+
+2019-06-13 07:30:58,917 p=20133 u=root |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "msg": "Error building built-by-ansible - code: 100, message: The command '/bin/sh -c apt-get install -y nginx' returned a non-zero code: 100, logs: [u'Step 1/7 : FROM ubuntu:latest', u'\\n', u' ---> 7698f282e524\\n', u'Step 2/7 : RUN apt-get install -y nginx', u'\\n', u' ---> Running in 7a7342530cb3\\n', u'Reading package lists...', u'\\n', u'Building dependency tree...', u'\\nReading state information...\\n', u'\\x1b[91mE: Unable to locate package nginx\\n\\x1b[0m', u'Removing intermediate container 7a7342530cb3\\n']"}
+2019-06-13 07:30:58,920 p=20133 u=root |  PLAY RECAP *********************************************************************
+2019-06-13 07:30:58,920 p=20133 u=root |  127.0.0.1                  : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-13 07:32:13,708 p=20484 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-13 07:32:13,724 p=20484 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-13 07:32:15,692 p=20484 u=root |  ok: [127.0.0.1]
+2019-06-13 07:32:15,812 p=20484 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-13 07:32:16,843 p=20484 u=root |  changed: [127.0.0.1]
+2019-06-13 07:32:16,968 p=20484 u=root |  TASK [build the image] *********************************************************
+2019-06-13 07:32:22,561 p=20484 u=root |   [WARNING]: Please specify build.path instead of path. The path option has been
+renamed and will be removed in Ansible 2.12.
+
+2019-06-13 07:32:22,574 p=20484 u=root |   [WARNING]: The value of the "source" option was determined to be "build".
+Please set the "source" option explicitly. Autodetection will be removed in
+Ansible 2.12.
+
+2019-06-13 07:32:22,576 p=20484 u=root |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "msg": "Error building built-by-ansible - code: 100, message: The command '/bin/sh -c apt-get install -y nginx' returned a non-zero code: 100, logs: [u'Step 1/7 : FROM ubuntu:latest', u'\\n', u' ---> 7698f282e524\\n', u'Step 2/7 : RUN apt-get install -y nginx', u'\\n', u' ---> Running in 623b0ec72660\\n', u'Reading package lists...', u'\\n', u'Building dependency tree...\\nReading state information...\\n', u'\\x1b[91mE: Unable to locate package nginx\\n\\x1b[0m', u'Removing intermediate container 623b0ec72660\\n']"}
+2019-06-13 07:32:22,578 p=20484 u=root |  PLAY RECAP *********************************************************************
+2019-06-13 07:32:22,578 p=20484 u=root |  127.0.0.1                  : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-13 07:33:21,321 p=20826 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-13 07:33:21,337 p=20826 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-13 07:33:23,356 p=20826 u=root |  ok: [127.0.0.1]
+2019-06-13 07:33:23,477 p=20826 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-13 07:33:24,394 p=20826 u=root |  changed: [127.0.0.1]
+2019-06-13 07:33:24,516 p=20826 u=root |  TASK [build the image] *********************************************************
+2019-06-13 07:34:23,763 p=20826 u=root |   [WARNING]: Please specify build.path instead of path. The path option has been
+renamed and will be removed in Ansible 2.12.
+
+2019-06-13 07:34:23,764 p=20826 u=root |   [WARNING]: The value of the "source" option was determined to be "build".
+Please set the "source" option explicitly. Autodetection will be removed in
+Ansible 2.12.
+
+2019-06-13 07:34:23,764 p=20826 u=root |  changed: [127.0.0.1]
+2019-06-13 07:34:23,886 p=20826 u=root |  TASK [run the site in a docker container] **************************************
+2019-06-13 07:34:24,481 p=20826 u=root |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "msg": "This module has been removed.  The module documentation for Ansible-2.3 may contain hints for porting"}
+2019-06-13 07:34:24,485 p=20826 u=root |  PLAY RECAP *********************************************************************
+2019-06-13 07:34:24,486 p=20826 u=root |  127.0.0.1                  : ok=3    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-13 07:46:11,864 p=22757 u=root |  ERROR! Syntax Error while loading YAML.
+  found a tab character that violate intendation
+
+The error appears to be in '/srv/ansible/ex1.yml': line 20, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        publish_all_ports: yes
+	port : 8081
+^ here
+There appears to be a tab character at the start of the line.
+
+YAML does not use tabs for formatting. Tabs should be replaced with spaces.
+
+For example:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+#    ^--- there is a tab there.
+
+Should be written as:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+# ^--- all spaces here.
+
+2019-06-13 07:46:35,629 p=22763 u=root |  ERROR! Syntax Error while loading YAML.
+  found character that cannot start any token
+
+The error appears to be in '/srv/ansible/ex1.yml': line 20, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+#        publish_all_ports: yes
+	port : 8081
+^ here
+There appears to be a tab character at the start of the line.
+
+YAML does not use tabs for formatting. Tabs should be replaced with spaces.
+
+For example:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+#    ^--- there is a tab there.
+
+Should be written as:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+# ^--- all spaces here.
+
+2019-06-13 07:47:04,273 p=22769 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-13 07:47:04,289 p=22769 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-13 07:47:06,436 p=22769 u=root |  ok: [127.0.0.1]
+2019-06-13 07:47:06,518 p=22769 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-13 07:47:07,591 p=22769 u=root |  changed: [127.0.0.1]
+2019-06-13 07:47:07,722 p=22769 u=root |  TASK [build the image] *********************************************************
+2019-06-13 07:47:09,088 p=22769 u=root |   [WARNING]: Please specify build.path instead of path. The path option has been
+renamed and will be removed in Ansible 2.12.
+
+2019-06-13 07:47:09,091 p=22769 u=root |   [WARNING]: The value of the "source" option was determined to be "build".
+Please set the "source" option explicitly. Autodetection will be removed in
+Ansible 2.12.
+
+2019-06-13 07:47:09,095 p=22769 u=root |  ok: [127.0.0.1]
+2019-06-13 07:47:09,352 p=22769 u=root |  TASK [run the site in a docker container] **************************************
+2019-06-13 07:47:10,224 p=22769 u=root |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "msg": "This module has been removed.  The module documentation for Ansible-2.3 may contain hints for porting"}
+2019-06-13 07:47:10,228 p=22769 u=root |  PLAY RECAP *********************************************************************
+2019-06-13 07:47:10,229 p=22769 u=root |  127.0.0.1                  : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-13 07:50:23,774 p=22975 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-13 07:50:23,789 p=22975 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-13 07:50:26,484 p=22975 u=root |  ok: [127.0.0.1]
+2019-06-13 07:50:26,601 p=22975 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-13 07:50:27,469 p=22975 u=root |  ok: [127.0.0.1]
+2019-06-13 07:50:27,594 p=22975 u=root |  TASK [build the image] *********************************************************
+2019-06-13 07:50:28,772 p=22975 u=root |   [WARNING]: Please specify build.path instead of path. The path option has been
+renamed and will be removed in Ansible 2.12.
+
+2019-06-13 07:50:28,774 p=22975 u=root |   [WARNING]: The value of the "source" option was determined to be "build".
+Please set the "source" option explicitly. Autodetection will be removed in
+Ansible 2.12.
+
+2019-06-13 07:50:28,775 p=22975 u=root |  ok: [127.0.0.1]
+2019-06-13 07:50:28,845 p=22975 u=root |  TASK [run the site in a docker container] **************************************
+2019-06-13 07:50:29,379 p=22975 u=root |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "msg": "This module has been removed.  The module documentation for Ansible-2.3 may contain hints for porting"}
+2019-06-13 07:50:29,384 p=22975 u=root |  PLAY RECAP *********************************************************************
+2019-06-13 07:50:29,384 p=22975 u=root |  127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-13 07:53:10,796 p=23175 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-13 07:53:10,812 p=23175 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-13 07:53:12,848 p=23175 u=root |  ok: [127.0.0.1]
+2019-06-13 07:53:12,940 p=23175 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-13 07:53:13,824 p=23175 u=root |  ok: [127.0.0.1]
+2019-06-13 07:53:13,952 p=23175 u=root |  TASK [build the image] *********************************************************
+2019-06-13 07:53:14,856 p=23175 u=root |   [WARNING]: Please specify build.path instead of path. The path option has been
+renamed and will be removed in Ansible 2.12.
+
+2019-06-13 07:53:14,858 p=23175 u=root |   [WARNING]: The value of the "source" option was determined to be "build".
+Please set the "source" option explicitly. Autodetection will be removed in
+Ansible 2.12.
+
+2019-06-13 07:53:14,858 p=23175 u=root |  ok: [127.0.0.1]
+2019-06-13 07:53:14,946 p=23175 u=root |  TASK [run the site in a docker container] **************************************
+2019-06-13 07:53:15,501 p=23175 u=root |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "msg": "This module has been removed.  The module documentation for Ansible-2.3 may contain hints for porting"}
+2019-06-13 07:53:15,506 p=23175 u=root |  PLAY RECAP *********************************************************************
+2019-06-13 07:53:15,506 p=23175 u=root |  127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-13 07:53:33,912 p=23366 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-13 07:53:33,927 p=23366 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-13 07:53:34,282 p=23366 u=root |   [ERROR]: User interrupted execution
+
+2019-06-13 07:54:38,055 p=23388 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-13 07:54:38,071 p=23388 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-13 07:54:40,127 p=23388 u=root |  ok: [127.0.0.1]
+2019-06-13 07:54:40,245 p=23388 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-13 07:54:41,271 p=23388 u=root |  ok: [127.0.0.1]
+2019-06-13 07:54:41,399 p=23388 u=root |  TASK [build the image] *********************************************************
+2019-06-13 07:54:42,493 p=23388 u=root |   [WARNING]: Please specify build.path instead of path. The path option has been
+renamed and will be removed in Ansible 2.12.
+
+2019-06-13 07:54:42,495 p=23388 u=root |   [WARNING]: The value of the "source" option was determined to be "build".
+Please set the "source" option explicitly. Autodetection will be removed in
+Ansible 2.12.
+
+2019-06-13 07:54:42,498 p=23388 u=root |  ok: [127.0.0.1]
+2019-06-13 07:54:42,501 p=23388 u=root |  PLAY RECAP *********************************************************************
+2019-06-13 07:54:42,501 p=23388 u=root |  127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-06-13 07:56:07,911 p=23567 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-13 07:56:07,926 p=23567 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-13 07:56:10,131 p=23567 u=root |  ok: [127.0.0.1]
+2019-06-13 07:56:10,248 p=23567 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-13 07:56:11,204 p=23567 u=root |  ok: [127.0.0.1]
+2019-06-13 07:56:11,326 p=23567 u=root |  TASK [build the image] *********************************************************
+2019-06-13 07:56:12,440 p=23567 u=root |   [WARNING]: Please specify build.path instead of path. The path option has been
+renamed and will be removed in Ansible 2.12.
+
+2019-06-13 07:56:12,443 p=23567 u=root |   [WARNING]: The value of the "source" option was determined to be "build".
+Please set the "source" option explicitly. Autodetection will be removed in
+Ansible 2.12.
+
+2019-06-13 07:56:12,443 p=23567 u=root |  ok: [127.0.0.1]
+2019-06-13 07:56:12,560 p=23567 u=root |  TASK [run the site in a docker container] **************************************
+2019-06-13 07:56:13,100 p=23567 u=root |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "msg": "This module has been removed.  The module documentation for Ansible-2.3 may contain hints for porting"}
+2019-06-13 07:56:13,105 p=23567 u=root |  PLAY RECAP *********************************************************************
+2019-06-13 07:56:13,105 p=23567 u=root |  127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-13 07:56:57,214 p=23762 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-13 07:56:57,229 p=23762 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-13 07:56:59,198 p=23762 u=root |  ok: [127.0.0.1]
+2019-06-13 07:56:59,319 p=23762 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-13 07:57:00,353 p=23762 u=root |  ok: [127.0.0.1]
+2019-06-13 07:57:00,474 p=23762 u=root |  TASK [build the image] *********************************************************
+2019-06-13 07:57:01,509 p=23762 u=root |   [WARNING]: Please specify build.path instead of path. The path option has been
+renamed and will be removed in Ansible 2.12.
+
+2019-06-13 07:57:01,510 p=23762 u=root |   [WARNING]: The value of the "source" option was determined to be "build".
+Please set the "source" option explicitly. Autodetection will be removed in
+Ansible 2.12.
+
+2019-06-13 07:57:01,514 p=23762 u=root |  ok: [127.0.0.1]
+2019-06-13 07:57:01,631 p=23762 u=root |  TASK [run the site in a docker container] **************************************
+2019-06-13 07:57:02,179 p=23762 u=root |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "msg": "This module has been removed.  The module documentation for Ansible-2.3 may contain hints for porting"}
+2019-06-13 07:57:02,184 p=23762 u=root |  PLAY RECAP *********************************************************************
+2019-06-13 07:57:02,184 p=23762 u=root |  127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-13 23:39:45,714 p=4647 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-13 23:39:45,772 p=4647 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-13 23:39:48,559 p=4647 u=root |  ok: [127.0.0.1]
+2019-06-13 23:39:48,666 p=4647 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-13 23:39:49,765 p=4647 u=root |  changed: [127.0.0.1]
+2019-06-13 23:39:49,875 p=4647 u=root |  TASK [build the image] *********************************************************
+2019-06-13 23:39:51,316 p=4647 u=root |   [WARNING]: Please specify build.path instead of path. The path option has been
+renamed and will be removed in Ansible 2.12.
+
+2019-06-13 23:39:51,320 p=4647 u=root |   [WARNING]: The value of the "source" option was determined to be "build".
+Please set the "source" option explicitly. Autodetection will be removed in
+Ansible 2.12.
+
+2019-06-13 23:39:51,320 p=4647 u=root |  ok: [127.0.0.1]
+2019-06-13 23:39:51,427 p=4647 u=root |  TASK [run the site in a docker container] **************************************
+2019-06-13 23:39:51,957 p=4647 u=root |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "msg": "This module has been removed.  The module documentation for Ansible-2.3 may contain hints for porting"}
+2019-06-13 23:39:51,960 p=4647 u=root |  PLAY RECAP *********************************************************************
+2019-06-13 23:39:51,960 p=4647 u=root |  127.0.0.1                  : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-14 06:10:50,782 p=5935 u=root |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to be in '/srv/ansible/ex1.yml': line 15, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+    - name: run the site in a docker container
+      ^ here
+
+2019-06-14 06:11:57,222 p=5947 u=root |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to be in '/srv/ansible/ex1.yml': line 15, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+    - name: "run the site in a docker container"
+      ^ here
+
+2019-06-14 06:14:03,382 p=5962 u=root |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to be in '/srv/ansible/ex1.yml': line 15, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+    - name: "run the site in a docker container"
+      ^ here
+
+2019-06-14 06:15:15,014 p=6290 u=root |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to be in '/srv/ansible/ex1.yml': line 15, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+    - name: "run the site in a docker container"
+      ^ here
+
+2019-06-14 06:17:13,617 p=6375 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-14 06:17:13,633 p=6375 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-14 06:17:15,840 p=6375 u=root |  ok: [127.0.0.1]
+2019-06-14 06:17:15,954 p=6375 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-14 06:17:16,982 p=6375 u=root |  ok: [127.0.0.1]
+2019-06-14 06:17:17,099 p=6375 u=root |  TASK [build the image] *********************************************************
+2019-06-14 06:17:18,233 p=6375 u=root |   [WARNING]: Please specify build.path instead of path. The path option has been
+renamed and will be removed in Ansible 2.12.
+
+2019-06-14 06:17:18,234 p=6375 u=root |   [WARNING]: The value of the "source" option was determined to be "build".
+Please set the "source" option explicitly. Autodetection will be removed in
+Ansible 2.12.
+
+2019-06-14 06:17:18,235 p=6375 u=root |  ok: [127.0.0.1]
+2019-06-14 06:17:18,347 p=6375 u=root |  TASK [run the site in a docker container] **************************************
+2019-06-14 06:17:19,328 p=6375 u=root |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (docker_container) module: publish_all_ports Supported parameters include: api_version, auto_remove, blkio_weight, ca_cert, cap_drop, capabilities, cleanup, client_cert, client_key, command, comparisons, cpu_period, cpu_quota, cpu_shares, cpuset_cpus, cpuset_mems, debug, detach, device_read_bps, device_read_iops, device_write_bps, device_write_iops, devices, dns_opts, dns_search_domains, dns_servers, docker_host, domainname, entrypoint, env, env_file, etc_hosts, exposed_ports, force_kill, groups, healthcheck, hostname, ignore_image, image, init, interactive, ipc_mode, keep_volumes, kernel_memory, kill_signal, labels, links, log_driver, log_options, mac_address, memory, memory_reservation, memory_swap, memory_swappiness, name, network_mode, networks, networks_cli_compatible, oom_killer, oom_score_adj, output_logs, paused, pid_mode, pids_limit, privileged, published_ports, pull, purge_networks, read_only, recreate, restart, restart_policy, restart_retries, runtime, security_opts, shm_size, ssl_version, state, stop_signal, stop_timeout, sysctls, timeout, tls, tls_hostname, tmpfs, trust_image_content, tty, ulimits, user, userns_mode, uts, validate_certs, volume_driver, volumes, volumes_from, working_dir"}
+2019-06-14 06:17:19,333 p=6375 u=root |  PLAY RECAP *********************************************************************
+2019-06-14 06:17:19,334 p=6375 u=root |  127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-06-14 06:17:53,545 p=6573 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-14 06:17:53,561 p=6573 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-14 06:17:55,625 p=6573 u=root |  ok: [127.0.0.1]
+2019-06-14 06:17:55,742 p=6573 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-14 06:17:56,635 p=6573 u=root |  ok: [127.0.0.1]
+2019-06-14 06:17:56,755 p=6573 u=root |  TASK [build the image] *********************************************************
+2019-06-14 06:17:57,913 p=6573 u=root |   [WARNING]: Please specify build.path instead of path. The path option has been
+renamed and will be removed in Ansible 2.12.
+
+2019-06-14 06:17:57,914 p=6573 u=root |   [WARNING]: The value of the "source" option was determined to be "build".
+Please set the "source" option explicitly. Autodetection will be removed in
+Ansible 2.12.
+
+2019-06-14 06:17:57,915 p=6573 u=root |  ok: [127.0.0.1]
+2019-06-14 06:17:58,030 p=6573 u=root |  TASK [run the site in a docker container] **************************************
+2019-06-14 06:18:03,410 p=6573 u=root |  changed: [127.0.0.1]
+2019-06-14 06:18:03,413 p=6573 u=root |  PLAY RECAP *********************************************************************
+2019-06-14 06:18:03,413 p=6573 u=root |  127.0.0.1                  : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-06-14 06:39:28,867 p=7072 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-14 06:39:28,879 p=7072 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-14 06:39:30,935 p=7072 u=root |  ok: [127.0.0.1]
+2019-06-14 06:39:31,043 p=7072 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-14 06:39:32,043 p=7072 u=root |  changed: [127.0.0.1]
+2019-06-14 06:39:32,159 p=7072 u=root |  TASK [build the image] *********************************************************
+2019-06-14 06:39:33,226 p=7072 u=root |   [WARNING]: Please specify build.path instead of path. The path option has been
+renamed and will be removed in Ansible 2.12.
+
+2019-06-14 06:39:33,227 p=7072 u=root |   [WARNING]: The value of the "source" option was determined to be "build".
+Please set the "source" option explicitly. Autodetection will be removed in
+Ansible 2.12.
+
+2019-06-14 06:39:33,227 p=7072 u=root |  ok: [127.0.0.1]
+2019-06-14 06:39:33,343 p=7072 u=root |  TASK [run the site in a docker container] **************************************
+2019-06-14 06:39:34,695 p=7072 u=root |  ok: [127.0.0.1]
+2019-06-14 06:39:34,697 p=7072 u=root |  PLAY RECAP *********************************************************************
+2019-06-14 06:39:34,698 p=7072 u=root |  127.0.0.1                  : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-06-14 06:44:42,109 p=7573 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-14 06:44:42,125 p=7573 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-14 06:44:44,089 p=7573 u=root |  ok: [127.0.0.1]
+2019-06-14 06:44:44,211 p=7573 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-14 06:44:45,236 p=7573 u=root |  ok: [127.0.0.1]
+2019-06-14 06:44:45,355 p=7573 u=root |  TASK [build the image] *********************************************************
+2019-06-14 06:44:46,467 p=7573 u=root |   [WARNING]: Please specify build.path instead of path. The path option has been
+renamed and will be removed in Ansible 2.12.
+
+2019-06-14 06:44:46,468 p=7573 u=root |   [WARNING]: The value of the "source" option was determined to be "build".
+Please set the "source" option explicitly. Autodetection will be removed in
+Ansible 2.12.
+
+2019-06-14 06:44:46,468 p=7573 u=root |  ok: [127.0.0.1]
+2019-06-14 06:44:46,581 p=7573 u=root |  TASK [run the site in a docker container] **************************************
+2019-06-14 06:44:50,598 p=7573 u=root |  changed: [127.0.0.1]
+2019-06-14 06:44:50,600 p=7573 u=root |  PLAY RECAP *********************************************************************
+2019-06-14 06:44:50,600 p=7573 u=root |  127.0.0.1                  : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-06-14 06:46:29,704 p=7966 u=root |  PLAY [Build an image with the docker_image module] *****************************
+2019-06-14 06:46:29,722 p=7966 u=root |  TASK [Gathering Facts] *********************************************************
+2019-06-14 06:46:31,748 p=7966 u=root |  ok: [127.0.0.1]
+2019-06-14 06:46:31,865 p=7966 u=root |  TASK [upload the site directory to the docker host] ****************************
+2019-06-14 06:46:32,873 p=7966 u=root |  ok: [127.0.0.1]
+2019-06-14 06:46:32,991 p=7966 u=root |  TASK [build the image] *********************************************************
+2019-06-14 06:46:34,061 p=7966 u=root |   [WARNING]: Please specify build.path instead of path. The path option has been
+renamed and will be removed in Ansible 2.12.
+
+2019-06-14 06:46:34,062 p=7966 u=root |   [WARNING]: The value of the "source" option was determined to be "build".
+Please set the "source" option explicitly. Autodetection will be removed in
+Ansible 2.12.
+
+2019-06-14 06:46:34,062 p=7966 u=root |  ok: [127.0.0.1]
+2019-06-14 06:46:34,170 p=7966 u=root |  TASK [run the site in a docker container] **************************************
+2019-06-14 06:46:37,982 p=7966 u=root |  changed: [127.0.0.1]
+2019-06-14 06:46:37,985 p=7966 u=root |  PLAY RECAP *********************************************************************
+2019-06-14 06:46:37,985 p=7966 u=root |  127.0.0.1                  : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-06-14 07:08:23,275 p=9091 u=root |  ERROR! Syntax Error while loading YAML.
+  found a tab character that violate intendation
+
+The error appears to be in '/srv/ansible/ex1.yml': line 20, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        state: started
+	ports: 22:49154
+^ here
+There appears to be a tab character at the start of the line.
+
+YAML does not use tabs for formatting. Tabs should be replaced with spaces.
+
+For example:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+#    ^--- there is a tab there.
+
+Should be written as:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+# ^--- all spaces here.
+
+2019-06-14 07:08:55,106 p=9099 u=root |  ERROR! Syntax Error while loading YAML.
+  found a tab character that violate intendation
+
+The error appears to be in '/srv/ansible/ex1.yml': line 20, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        state: started
+	ports: "22:49154"
+^ here
+There appears to be a tab character at the start of the line.
+
+YAML does not use tabs for formatting. Tabs should be replaced with spaces.
+
+For example:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+#    ^--- there is a tab there.
+
+Should be written as:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+# ^--- all spaces here.
+This one looks easy to fix. It seems that there is a value started
+with a quote, and the YAML parser is expecting to see the line ended
+with the same kind of quote. For instance:
+
+    when: "ok" in result.stdout
+
+Could be written as:
+
+   when: '"ok" in result.stdout'
+
+Or equivalently:
+
+   when: "'ok' in result.stdout"
+
+2019-06-14 07:09:34,913 p=9106 u=root |  ERROR! Syntax Error while loading YAML.
+  found a tab character that violate intendation
+
+The error appears to be in '/srv/ansible/ex1.yml': line 20, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        state: started
+	ports:
+^ here
+There appears to be a tab character at the start of the line.
+
+YAML does not use tabs for formatting. Tabs should be replaced with spaces.
+
+For example:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+#    ^--- there is a tab there.
+
+Should be written as:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+# ^--- all spaces here.
+
